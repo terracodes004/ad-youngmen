@@ -194,4 +194,120 @@ input[type=button]:hover{
         display: inline-block;
     }
     
+
+}
+/* === About & Values Styling === */
+.about-section {
+    padding: 3rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.about-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #1a5276;
+}
+.about-section > p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    color: #555;
+}
+.values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.value-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.8rem;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    border-top: 5px solid #66ffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.value-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+}
+
+/* === Activities Section Styling === */
+.activities-section {
+    padding: 3rem 1rem;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+.activity-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+.activity-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+.activity-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.activity-info {
+    padding: 1.5rem;
+    text-align: left;
+}
+.activity-info h3 {
+    color: #1a5276;
+    margin-bottom: 0.5rem;
+}
+
+/* === Footer Styling === */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 2.5rem 1rem 1rem;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-logo, .footer-contact, .footer-links {
+    flex: 1;
+    min-width: 250px;
+}
+footer h4 {
+    color: #66ffff;
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+}
+footer a {
+    color: #bdc3c7;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+footer a:hover {
+    color: #66ffff;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #34495e;
+    color: #95a5a6;
+    font-size: 0.9rem;
 }
