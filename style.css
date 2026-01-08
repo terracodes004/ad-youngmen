@@ -602,3 +602,377 @@ nav a.active {
     transform: translateX(10px);
     background: #e8f4fc;
 }
+
+/* ===== Enhanced Purpose Section ===== */
+.lds-purpose {
+    padding: 5rem 1rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e8f4fc 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.lds-purpose::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1a5276, #2ecc71, #9b59b6);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.header-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    color: #1a5276;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    color: #5d6d7e;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.purpose-card {
+    perspective: 1000px;
+}
+
+.purpose-card-inner {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    height: 100%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(26, 82, 118, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(26, 82, 118, 0.1);
+}
+
+.purpose-card-inner:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(26, 82, 118, 0.15);
+    border-color: rgba(26, 82, 118, 0.2);
+}
+
+.purpose-icon-container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+}
+
+.purpose-icon {
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.icon-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e8f4fc, #d4e7f7);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.purpose-card h3 {
+    color: #1a5276;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.purpose-card p {
+    color: #5d6d7e;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.purpose-scripture {
+    background: #f8fafc;
+    border-left: 4px solid #1a5276;
+    padding: 1rem;
+    border-radius: 0 8px 8px 0;
+    margin-top: 1.5rem;
+    font-style: italic;
+    color: #34495e;
+}
+
+.purpose-scripture span {
+    display: block;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* ===== Enhanced Quorums Section ===== */
+.quorums-section {
+    padding: 5rem 1rem;
+    background: white;
+}
+
+.quorum-timeline {
+    max-width: 1000px;
+    margin: 4rem auto 0;
+    position: relative;
+}
+
+.timeline-path {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #1a5276, #2ecc71, #9b59b6);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.quorum-timeline-item {
+    display: flex;
+    margin-bottom: 4rem;
+    position: relative;
+    align-items: center;
+}
+
+.quorum-timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.timeline-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+    margin: 0 3rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.deacons .timeline-icon {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.teachers .timeline-icon {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.priests .timeline-icon {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.timeline-content {
+    flex: 1;
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.quorum-timeline-item:nth-child(odd) .timeline-content {
+    text-align: right;
+}
+
+.timeline-content h3 {
+    color: #1a5276;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.age-range {
+    color: #7f8c8d;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.quorum-duties {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.quorum-timeline-item:nth-child(odd) .quorum-duties {
+    direction: rtl;
+}
+
+.duty {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.duty:hover {
+    transform: translateY(-2px);
+    background: #e8f4fc;
+}
+
+.duty-icon {
+    font-size: 1.3rem;
+    margin-right: 0.8rem;
+}
+
+.quorum-timeline-item:nth-child(odd) .duty-icon {
+    margin-right: 0;
+    margin-left: 0.8rem;
+}
+
+.quorum-scripture {
+    background: linear-gradient(135deg, #f8fafc, #e8f4fc);
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    font-style: italic;
+    color: #34495e;
+    border-left: 4px solid #1a5276;
+}
+
+.quorum-timeline-item:nth-child(odd) .quorum-scripture {
+    border-left: none;
+    border-right: 4px solid #1a5276;
+}
+
+.quorum-scripture span {
+    display: block;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .quorum-timeline {
+        padding-left: 60px;
+    }
+    
+    .timeline-path {
+        left: 30px;
+    }
+    
+    .quorum-timeline-item {
+        flex-direction: row !important;
+        margin-bottom: 3rem;
+    }
+    
+    .timeline-icon {
+        position: absolute;
+        left: -60px;
+        margin: 0;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .timeline-content {
+        padding: 1.8rem;
+    }
+    
+    .quorum-duties {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .purpose-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .lds-purpose,
+    .quorums-section {
+        padding: 3rem 1rem;
+    }
+    
+    .purpose-card-inner {
+        padding: 2rem 1.5rem;
+    }
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.purpose-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+.purpose-card:nth-child(2) .purpose-icon {
+    animation-delay: 0.5s;
+}
+
+.purpose-card:nth-child(3) .purpose-icon {
+    animation-delay: 1s;
+}
+.gradient-text {
+    background: linear-gradient(90deg, #1a5276, #2ecc71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Apply to your h2: */
+.section-header h2 {
+    /* Remove color property and add: */
+    background: linear-gradient(90deg, #1a5276, #2ecc71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.lds-purpose {
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(26, 82, 118, 0.03) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(46, 204, 113, 0.03) 0%, transparent 20%);
+    background-color: #f8fafc;
+}
