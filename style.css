@@ -976,3 +976,468 @@ nav a.active {
         radial-gradient(circle at 90% 80%, rgba(46, 204, 113, 0.03) 0%, transparent 20%);
     background-color: #f8fafc;
 }
+
+/* ===== Enhanced Leadership Section ===== */
+.leadership-section {
+    padding: 5rem 1rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.leadership-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1a5276, #2ecc71, #9b59b6);
+    z-index: 1;
+}
+
+/* Priesthood Line Visualization */
+.priesthood-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, 
+        rgba(26, 82, 118, 0.2) 0%,
+        rgba(26, 82, 118, 0.4) 30%,
+        rgba(46, 204, 113, 0.4) 60%,
+        rgba(155, 89, 182, 0.2) 100%);
+    z-index: 0;
+}
+
+.line-bishopric, .line-presidency, .line-advisors {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        rgba(26, 82, 118, 0.3) 20%,
+        rgba(26, 82, 118, 0.3) 80%,
+        transparent 100%);
+}
+
+.line-bishopric { top: 25%; }
+.line-presidency { top: 50%; }
+.line-advisors { top: 75%; }
+
+/* Leadership Hierarchy */
+.leadership-hierarchy {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.leadership-level {
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.level-label {
+    text-align: center;
+    color: #1a5276;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 1.5rem;
+    background: white;
+}
+
+/* Featured Leader (Bishopric Advisor) */
+.featured-leader {
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 15px 40px rgba(26, 82, 118, 0.1);
+    border: 2px solid rgba(26, 82, 118, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-leader::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #1a5276, #2ecc71);
+}
+
+.leader-photo-container {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1.5rem;
+}
+
+.leader-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border: 5px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 82, 118, 0.1), rgba(46, 204, 113, 0.1));
+    border-radius: 50%;
+}
+
+.calling-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 3px solid #1a5276;
+}
+
+.featured-leader .calling-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+    border-color: #1a5276;
+    background: #1a5276;
+    color: white;
+}
+
+.leader-info h3 {
+    color: #1a5276;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.calling {
+    color: #2ecc71;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.responsibility {
+    color: #5d6d7e;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.leader-scripture {
+    background: linear-gradient(135deg, #f8fafc, #e8f4fc);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    font-style: italic;
+    color: #34495e;
+    border-left: 4px solid #1a5276;
+    text-align: left;
+}
+
+.leader-scripture span {
+    display: block;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* Young Men Presidency Grid */
+.presidency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.presidency-level .leader-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.presidency-level .leader-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(26, 82, 118, 0.15);
+    border-color: rgba(26, 82, 118, 0.2);
+}
+
+.presidency-level .leader-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2ecc71, #3498db);
+}
+
+.presidency-level .leader-photo-container {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 1.5rem;
+}
+
+.presidency-level .leader-photo {
+    border: 4px solid white;
+}
+
+.presidency-level h3 {
+    color: #1a5276;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Advisors Grid */
+.advisors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.advisor-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.04);
+    transition: all 0.3s ease;
+}
+
+.advisor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.advisor-role {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.advisor-role::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.deacon-advisor {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+}
+.deacon-advisor::before { background: #3498db; }
+
+.teacher-advisor {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+}
+.teacher-advisor::before { background: #2ecc71; }
+
+.priest-advisor {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    color: white;
+}
+.priest-advisor::before { background: #9b59b6; }
+
+.specialist {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+}
+.specialist::before { background: #e74c3c; }
+
+.role-icon {
+    font-size: 2rem;
+}
+
+.advisor-card h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.advisor-name {
+    color: #1a5276;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.advisor-responsibility {
+    color: #5d6d7e;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Ordination Note */
+.ordination-note {
+    max-width: 800px;
+    margin: 4rem auto 0;
+    background: linear-gradient(135deg, #f8fafc, #e8f4fc);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    border-left: 4px solid #1a5276;
+    border-right: 4px solid #1a5276;
+    position: relative;
+    overflow: hidden;
+}
+
+.ordination-note::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1a5276, #2ecc71, #9b59b6);
+}
+
+.note-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.ordination-note p {
+    color: #34495e;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+    font-style: italic;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 992px) {
+    .presidency-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .priesthood-line,
+    .line-bishopric,
+    .line-presidency,
+    .line-advisors {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .leadership-section {
+        padding: 3rem 1rem;
+    }
+    
+    .featured-leader {
+        padding: 2rem;
+    }
+    
+    .presidency-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .advisors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .advisors-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-leader {
+        padding: 1.5rem;
+    }
+    
+    .leader-photo-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .ordination-note {
+        padding: 1.5rem;
+    }
+}
+
+/* Animation for Cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.leader-card, .advisor-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.presidency-level .leader-card:nth-child(1) { animation-delay: 0.1s; }
+.presidency-level .leader-card:nth-child(2) { animation-delay: 0.2s; }
+.presidency-level .leader-card:nth-child(3) { animation-delay: 0.3s; }
+
+.advisors-level .advisor-card:nth-child(1) { animation-delay: 0.4s; }
+.advisors-level .advisor-card:nth-child(2) { animation-delay: 0.5s; }
+.advisors-level .advisor-card:nth-child(3) { animation-delay: 0.6s; }
+.advisors-level .advisor-card:nth-child(4) { animation-delay: 0.7s; }
