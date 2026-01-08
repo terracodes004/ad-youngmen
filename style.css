@@ -1441,3 +1441,542 @@ nav a.active {
 .advisors-level .advisor-card:nth-child(2) { animation-delay: 0.5s; }
 .advisors-level .advisor-card:nth-child(3) { animation-delay: 0.6s; }
 .advisors-level .advisor-card:nth-child(4) { animation-delay: 0.7s; }
+/* ===== Activities Page Specific Styles ===== */
+.activities-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Activities Hero */
+.activities-hero {
+    background: linear-gradient(rgba(26, 82, 118, 0.88), rgba(26, 82, 118, 0.92)), url('img/activities-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.activities-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.activities-hero p {
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Calendar Section */
+.calendar-section {
+    padding: 4rem 1rem;
+    background: #f8fafc;
+}
+
+.calendar-container {
+    max-width: 1000px;
+    margin: 2rem auto 0;
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.month-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #e8f4fc;
+}
+
+.month-header h3 {
+    color: #1a5276;
+    font-size: 1.8rem;
+}
+
+.month-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-btn {
+    background: #e8f4fc;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #1a5276;
+    transition: all 0.3s;
+}
+
+.nav-btn:hover {
+    background: #1a5276;
+    color: white;
+}
+
+.current-month {
+    font-weight: 600;
+    color: #2c3e50;
+    min-width: 120px;
+    text-align: center;
+}
+
+/* Event Cards */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.event-card {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.event-card.highlight {
+    border: 2px solid #2ecc71;
+    grid-column: 1 / -1;
+}
+
+.event-date {
+    background: #1a5276;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.date-day {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.date-month {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 0.3rem;
+}
+
+.event-details {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.event-details h4 {
+    color: #1a5276;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.event-time {
+    color: #5d6d7e;
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+}
+
+.event-desc {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.event-tag {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.event-tag.deacons {
+    background: #e8f4fc;
+    color: #3498db;
+}
+
+.event-tag.teachers {
+    background: #e8f7f0;
+    color: #27ae60;
+}
+
+.event-tag.priests {
+    background: #f3e8f7;
+    color: #8e44ad;
+}
+
+.calendar-note {
+    background: #e8f4fc;
+    padding: 1.2rem;
+    border-radius: 8px;
+    border-left: 4px solid #2ecc71;
+    margin-top: 2rem;
+}
+
+/* Programs Section */
+.programs-section {
+    padding: 4rem 1rem;
+    background: white;
+}
+
+.program-timeline {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    position: relative;
+}
+
+.program-timeline::before {
+    content: "";
+    position: absolute;
+    left: 120px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #1a5276, #2ecc71, #9b59b6);
+}
+
+.program-day {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.day-header {
+    width: 120px;
+    padding-right: 2rem;
+    text-align: right;
+    position: relative;
+}
+
+.day-header h3 {
+    color: #1a5276;
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.day-time {
+    color: #2ecc71;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.day-content {
+    flex: 1;
+    padding-left: 2rem;
+    border-left: 1px solid #e0e0e0;
+    margin-left: 2rem;
+}
+
+.day-content h4 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.program-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+    color: #5d6d7e;
+    font-size: 0.95rem;
+}
+
+.program-details span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Activity Types */
+.activity-types {
+    padding: 4rem 1rem;
+    background: #f8fafc;
+}
+
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 3rem auto 0;
+}
+
+.type-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    border-top: 5px solid #1a5276;
+}
+
+.type-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.type-card.spiritual { border-top-color: #1a5276; }
+.type-card.service { border-top-color: #2ecc71; }
+.type-card.skills { border-top-color: #3498db; }
+.type-card.physical { border-top-color: #9b59b6; }
+
+.type-icon {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+}
+
+.type-card h3 {
+    color: #1a5276;
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+}
+
+.type-card ul {
+    list-style: none;
+    text-align: left;
+    color: #5d6d7e;
+}
+
+.type-card li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.type-card li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+/* Registration CTA */
+.registration-cta {
+    background: linear-gradient(135deg, #1a5276 0%, #2c3e50 100%);
+    color: white;
+    padding: 5rem 1rem;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content > p {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    background: rgba(255,255,255,0.1);
+    padding: 2.5rem;
+    border-radius: 12px;
+}
+
+.cta-info {
+    text-align: left;
+    flex: 1;
+    min-width: 300px;
+}
+
+.cta-info h4 {
+    color: #66ffff;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.cta-info p {
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    text-align: center;
+    min-width: 200px;
+}
+
+.cta-btn.primary {
+    background: #66ffff;
+    color: #1a5276;
+}
+
+.cta-btn.primary:hover {
+    background: #33ffff;
+    transform: scale(1.05);
+}
+
+.cta-btn.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-btn.secondary:hover {
+    background: white;
+    color: #1a5276;
+}
+
+.participation-note {
+    max-width: 600px;
+    margin: 3rem auto 0;
+    font-style: italic;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .activities-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .activities-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .calendar-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .event-card.highlight {
+        grid-column: auto;
+    }
+    
+    .program-timeline::before {
+        left: 90px;
+    }
+    
+    .day-header {
+        width: 90px;
+        padding-right: 1rem;
+    }
+    
+    .day-content {
+        padding-left: 1.5rem;
+        margin-left: 1rem;
+    }
+    
+    .program-details {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cta-info {
+        text-align: center;
+    }
+    
+    .types-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-container {
+        padding: 1.5rem;
+    }
+    
+    .month-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .event-card {
+        flex-direction: column;
+    }
+    
+    .event-date {
+        min-width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .date-day {
+        font-size: 2rem;
+    }
+    
+    .program-timeline::before {
+        display: none;
+    }
+    
+    .program-day {
+        flex-direction: column;
+    }
+    
+    .day-header {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .day-content {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
+        border-top: 2px solid #e8f4fc;
+        padding-top: 1.5rem;
+    }
+}
+
