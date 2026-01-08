@@ -56,4 +56,36 @@ stuff.addEventListener("click",()=>{
     }
 })
 
+
 let ul = document.querySelector("ul")
+// Leadership section hover effects
+document.querySelectorAll('.leader-card, .advisor-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.zIndex = '10';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.zIndex = '1';
+    });
+});
+
+// Click to view more info (optional feature)
+document.querySelectorAll('.leader-card').forEach(card => {
+    card.addEventListener('click', function() {
+        const leaderName = this.querySelector('h3').textContent;
+        const calling = this.querySelector('.calling').textContent;
+        
+        // You could create a modal or expandable section here
+        console.log(`Clicked: ${leaderName} - ${calling}`);
+        
+        // Example: Toggle expanded view
+        const responsibility = this.querySelector('.responsibility');
+        if (responsibility.style.maxHeight && responsibility.style.maxHeight !== '0px') {
+            responsibility.style.maxHeight = '0';
+            responsibility.style.opacity = '0';
+        } else {
+            responsibility.style.maxHeight = responsibility.scrollHeight + 'px';
+            responsibility.style.opacity = '1';
+        }
+    });
+});
